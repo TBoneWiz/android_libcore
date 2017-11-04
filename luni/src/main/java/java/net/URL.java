@@ -476,7 +476,6 @@ public final class URL implements Serializable {
      * @throws IOException if an error occurs while opening the connection.
      */
     public URLConnection openConnection() throws IOException {
-        java.util.SeempLog.record_str(91, "URL: "+query);
         return streamHandler.openConnection(this);
     }
 
