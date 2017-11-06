@@ -612,6 +612,7 @@ public class KXmlParser implements XmlPullParser, Closeable {
         }
 
         read('>');
+        skip();
     }
 
     /**
@@ -1663,6 +1664,7 @@ public class KXmlParser implements XmlPullParser, Closeable {
         this.reader = reader;
 
         type = START_DOCUMENT;
+        parsedTopLevelStartTag = false;
         name = null;
         namespace = null;
         degenerated = false;
